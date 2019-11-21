@@ -119,3 +119,19 @@ var rmZero = function(nums) {
     return nums;
 }
 
+// 反转数组
+/**
+ * @param {number[]} arr
+ * @return {number[]} 
+ */
+// 法一：头尾对应位置交换值
+var reverseArr = function(arr) {
+    for(let i=0; i< arr.length/2 ; i++) {
+        let tmp = arr[i];
+        arr[i] = arr[arr.length - i -1];
+        arr[arr.length - i -1] = tmp;
+    }
+    return arr;
+}
+
+
