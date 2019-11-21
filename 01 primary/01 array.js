@@ -135,3 +135,29 @@ var reverseArr = function(arr) {
 }
 
 
+// 冒泡排序(小到大)
+// 2,1,5,12,66,88,23,11,56,43,77,11,0,1,4
+/**
+ * @param {number[]} nums
+ * @return {number[]} 
+ */
+var bubbleSort = function(nums) {
+    // 每次循环得到倒数的最大值
+    for(let i=0; i< nums.length - 1 ; i++) {
+        // 标记内层循环进入后，如果没有可以交换的值，也就是排序完成
+        let flag = true;
+        for(let j=0; j<nums.length -i -1 ; j++) {
+            if(nums[j] > nums[j+1]) {
+                flag = false;
+                let tmp = nums[j];
+                nums[j] = nums[j+1];
+                nums[j+1] = tmp;
+            }
+            console.log(nums, i)
+        }
+        if(flag) break;
+    }
+    return nums;
+}
+
+
