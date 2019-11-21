@@ -166,12 +166,10 @@ var bubbleSort = function(nums) {
  */
 var getAllSum = function() {
     let sum = 0;
-    let arg = arguments[0];
  
-    for(let i=0; i < arg.length; i++) {
-        sum += arg[i];
+    for(let i=0; i < arguments.length; i++) {
+        sum += arguments[i];
     }
-    
     return sum;
 }
 
