@@ -133,6 +133,9 @@ var reverseArr = function(arr) {
     }
     return arr;
 }
+// 法二：  数组自己反转的方法调用
+var arr;
+arr = arr.reverse();
 
 
 // 冒泡排序(小到大)
