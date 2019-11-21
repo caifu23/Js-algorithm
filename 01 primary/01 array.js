@@ -136,7 +136,6 @@ var reverseArr = function(arr) {
 
 
 // 冒泡排序(小到大)
-// 2,1,5,12,66,88,23,11,56,43,77,11,0,1,4
 /**
  * @param {number[]} nums
  * @return {number[]} 
@@ -160,4 +159,19 @@ var bubbleSort = function(nums) {
     return nums;
 }
 
+// 个数不定的数字求和
+/**
+ * @param {number[]} nums
+ * @return {number} sum
+ */
+var getAllSum = function() {
+    let sum = 0;
+    let arg = arguments[0];
+ 
+    for(let i=0; i < arg.length; i++) {
+        sum += arg[i];
+    }
+    
+    return sum;
+}
 
