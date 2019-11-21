@@ -94,3 +94,28 @@ var moveZeroes = function(nums) {
     return nums;
 };
 
+
+// 数组去零
+/**
+ * @param {number[]} nums
+ * @return {number[]} 
+ */
+// 法一：原数组上删除
+var removeZero = function(nums) {
+    for(let i=0; i< nums.length; i++) {
+        if(nums[i] === 0) {
+            nums.splice(i, 1);
+            i--;
+        }
+    }
+    return nums;
+}
+
+// 法二：用es6
+var rmZero = function(nums) {
+    nums = nums.filter(function(ele) {
+        return ele !== 0;
+    });
+    return nums;
+}
+
