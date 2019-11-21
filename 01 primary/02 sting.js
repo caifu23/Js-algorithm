@@ -7,7 +7,7 @@
 
 /**
  * @param {character[]} s
- * @return {void} Do not return anything, modify s in-place instead.
+ * @return {character[]}  s
  */
 var reverseString = function(s) {
     var tem;
@@ -18,3 +18,30 @@ var reverseString = function(s) {
    }
    return s;
 };
+
+// 查找字符串中出现最多的字符
+/**
+ * @param {character} str
+ * @return {} 
+ */
+var maxStr = function(str) {
+    let obj = {};
+    for(let i=0; i<str.length; i++) {
+        if(obj[str[i]]) {
+            // 如果该字符已经存在，则计数加一
+            obj[str[i]]++ ;
+        }else {
+            obj[str[i]] = 1;
+        }
+    }
+    
+    let e = 1;
+    let i;
+    for (let key in obj) {
+        if(obj[key] > e) {
+            e = obj[key];
+            i = key;
+        }
+    }
+    return i;
+}
